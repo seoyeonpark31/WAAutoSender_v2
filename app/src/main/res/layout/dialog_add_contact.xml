@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이름"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="전화번호 (국가코드 포함)"
+        android:inputType="phone"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvPhoneHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="국가코드 포함 숫자만 입력&#10;예) 한국 010-1234-5678 → 821012345678"
+        android:textSize="12sp"
+        android:textColor="#888888"/>
+
+</LinearLayout>

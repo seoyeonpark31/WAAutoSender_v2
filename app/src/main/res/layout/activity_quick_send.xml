@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F0F0">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 링크 붙여넣기 카드 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="14dp"
+                android:elevation="3dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📋 wa.me 링크 붙여넣기"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#333333"/>
+
+                    <Button
+                        android:id="@+id/btnExtract"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="번호 추출"
+                        android:backgroundTint="#607D8B"
+                        android:textColor="#FFFFFF"
+                        android:padding="8dp"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etLinks"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:hint="여기에 wa.me 링크들을 붙여넣으세요&#10;예) http://wa.me//+233508935316http://wa.me//+233203343285..."
+                    android:gravity="top"
+                    android:padding="10dp"
+                    android:background="#F8F8F8"
+                    android:inputType="textMultiLine"
+                    android:textSize="12sp"/>
+
+                <!-- 추출 결과 -->
+                <LinearLayout
+                    android:id="@+id/layoutExtractResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"
+                    android:background="#E8F5E9"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvExtractResult"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📞 0개 번호 추출됨"
+                        android:textSize="13sp"
+                        android:textColor="#2E7D32"
+                        android:textStyle="bold"/>
+
+                    <Button
+                        android:id="@+id/btnShowNumbers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="확인"
+                        android:backgroundTint="#4CAF50"
+                        android:textColor="#FFFFFF"
+                        android:padding="6dp"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 메시지 카드 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="14dp"
+                android:elevation="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="💬 전송할 메시지"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/etMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:hint="모든 번호에 보낼 메시지를 입력하세요"
+                    android:gravity="top"
+                    android:padding="10dp"
+                    android:background="#F8F8F8"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 전송 버튼 -->
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📤 전송하기"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:layout_margin="12dp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>

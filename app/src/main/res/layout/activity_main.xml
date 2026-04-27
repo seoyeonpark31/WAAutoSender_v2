@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F0F0">
+
+    <!-- 상단 권한 버튼 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="#1A1A2E">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📱 WA 자동전송"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:paddingBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnAccessibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚠️ 접근성 권한 허용하기 (필수)"
+            android:backgroundTint="#FF5722"
+            android:textColor="#FFFFFF"
+            android:padding="10dp"
+            android:textSize="13sp"
+            android:layout_marginBottom="4dp"/>
+
+        <Button
+            android:id="@+id/btnOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚠️ 다른 앱 위에 표시 허용하기 (필수)"
+            android:backgroundTint="#E91E63"
+            android:textColor="#FFFFFF"
+            android:padding="10dp"
+            android:textSize="13sp"/>
+
+        <!-- 구글 시트 연동 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnSheetUrl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🔗 시트 URL 설정"
+                android:backgroundTint="#607D8B"
+                android:textColor="#FFFFFF"
+                android:padding="10dp"
+                android:textSize="12sp"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnSync"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🔄 시트 동기화"
+                android:backgroundTint="#00ACC1"
+                android:textColor="#FFFFFF"
+                android:padding="10dp"
+                android:textSize="12sp"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <!-- 빠른 전송 버튼 -->
+        <Button
+            android:id="@+id/btnQuickSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📋 wa.me 링크 붙여넣기 전송"
+            android:backgroundTint="#5C6BC0"
+            android:textColor="#FFFFFF"
+            android:padding="10dp"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+    <!-- 그룹 목록 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:id="@+id/groupContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+    </ScrollView>
+
+</LinearLayout>
