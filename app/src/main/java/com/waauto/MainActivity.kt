@@ -99,26 +99,27 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showSheetUrlDialog() {
-        val view = LayoutInflater.from(this).inflate(android.R.layout.edit_text, null)
-        val et = view.findViewById<EditText>(android.R.id.edit)
-        et.hint = "https://script.google.com/macros/s/..."
-        et.setText(DataManager.getSheetUrl(this))
-        et.setSingleLine(false)
-        et.minLines = 2
+    val et = EditText(this)
+    et.hint = "https://script.google.com/macros/s/..."
+    et.setText(DataManager.getSheetUrl(this))
+    et.setSingleLine(false)
+    et.minLines = 2
+    val pad = (16 * resources.displayMetrics.density).toInt()
+    et.setPadding(pad, pad, pad, pad)
 
-        AlertDialog.Builder(this)
-            .setTitle("🔗 구글 시트 URL 설정")
-            .setMessage("Apps Script 웹앱 URL을 입력하세요")
-            .setView(view)
-            .setPositiveButton("저장") { _, _ ->
-                val url = et.text.toString().trim()
-                DataManager.saveSheetUrl(this, url)
-                updateSheetButtons()
-                Toast.makeText(this, "URL 저장됨!", Toast.LENGTH_SHORT).show()
-            }
-            .setNegativeButton("취소", null)
-            .show()
-    }
+    AlertDialog.Builder(this)
+        .setTitle("🔗 구글 시트 URL 설정")
+        .setMessage("Apps Script 웹앱 URL을 입력하세요")
+        .setView(et)
+        .setPositiveButton("저장") { _, _ ->
+            val url = et.text.toString().trim()
+            DataManager.saveSheetUrl(this, url)
+            updateSheetButtons()
+            Toast.makeText(this, "URL 저장됨!", Toast.LENGTH_SHORT).show()
+        }
+        .setNegativeButton("취소", null)
+        .show()
+}
 
     private fun updatePermissionButtons() {
         val accessOk = isAccessibilityEnabled()
