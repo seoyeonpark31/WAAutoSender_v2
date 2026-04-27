@@ -8,7 +8,7 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.waauto.v2"
+        applicationId "com.waauto.v3"
         minSdk 26
         targetSdk 34
         versionCode 1
